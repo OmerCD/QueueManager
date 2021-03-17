@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <PackageVersion>0.1.0</PackageVersion>
+        <Title>RabbitMq Dependency Injection</Title>
+        <Authors>Omer Can Danacioglu</Authors>
+        <Description>RabbitMq Publisher and Consumer system</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+        <HintPath>..\..\..\..\..\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\5.0.0\ref\net5.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
+        <HintPath>..\..\..\..\..\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\5.0.0\ref\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\QueueManager.Core\QueueManager.Core.csproj" />
+      <ProjectReference Include="..\QueueManager.QueueManagement\QueueManager.QueueManagement.csproj" />
+      <ProjectReference Include="..\QueueManager.RabbitMq.ConnectionManager\QueueManager.RabbitMq.ConnectionManager.csproj" />
+      <ProjectReference Include="..\QueueManager.RabbitMq.Consumer\QueueManager.RabbitMq.Consumer.csproj" />
+      <ProjectReference Include="..\QueueManager.RabbitMq.Publisher\QueueManager.RabbitMq.Publisher.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="5.0.0" />
+    </ItemGroup>
+</Project>

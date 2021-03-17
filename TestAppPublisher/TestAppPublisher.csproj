@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <RootNamespace>TestApp</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\QueueManager.QueueManagement\QueueManager.QueueManagement.csproj" />
+      <ProjectReference Include="..\QueueManager.RabbitMq.DependencyInjection\QueueManager.RabbitMq.DependencyInjection.csproj" />
+      <ProjectReference Include="..\QueueManager.RabbitMq.Publisher\QueueManager.RabbitMq.Publisher.csproj" />
+      <ProjectReference Include="..\TestContract\TestContract.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\QueueManager.Contract\QueueManager.Contract.csproj" />
+      <ProjectReference Include="..\QueueManager.Core\QueueManager.Core.csproj" />
+      <ProjectReference Include="..\QueueManager.RabbitMq.ConnectionManager\QueueManager.RabbitMq.ConnectionManager.csproj" />
+    </ItemGroup>
+</Project>
